@@ -31,7 +31,8 @@ function App() {
   
   // Initialize socket connection
   useEffect(() => {
-    const newSocket = io('http://192.168.236.184:3000');
+    // const newSocket = io('http://192.168.236.184:3000');
+    const newSocket = io('https://chat-websockets-nodejs.onrender.com');
     setSocket(newSocket);
     
     // Cleanup on unmount
