@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { io, Socket } from 'socket.io-client';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 // Define types
@@ -125,7 +123,7 @@ function App() {
   // Handle typing indicators
   const handleTyping = () => {
     if (!socket || !isTyping) {
-      socket.emit('typing', true);
+      socket?.emit('typing', true);
       setIsTyping(true);
     }
     
